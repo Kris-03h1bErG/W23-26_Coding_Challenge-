@@ -7,6 +7,6 @@ primes = []
 
 def prime_generator(start, stop=6000):
 
-def odd_composite_generator(start, stop=6000, primes):
+def odd_composite_generator(start, primes, stop=6000):
 
 
