@@ -6,18 +6,23 @@ odd_composites = []
 squares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 primes = []
 
-def prime_generator(start, stop=6000):
+def prime_generator(start, stop=10):
     for num in range(stop):
         for i in range(2, num):
+            counter = 0
             if num % i == 0:
-                continue
-            else:
-                primes.append[num]
+                counter += 1
+            if counter == 0:
+                primes.append(num)
+            
+
+                
     return primes
 
 
 # def odd_composite_generator(start, primes, stop=6000):
 
 print(prime_generator(1))
+
 
 
