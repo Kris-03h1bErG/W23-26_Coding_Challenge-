@@ -8,12 +8,16 @@ primes = []
 
 def prime_generator(start, stop=6000):
     for num in range(stop):
-        for i in range(1, num):
-            print(i)
+        for i in range(2, num):
+            if num % i == 0:
+                continue
+            else:
+                primes.append[num]
+    return primes
 
 
 # def odd_composite_generator(start, primes, stop=6000):
 
-prime_generator(1)
+print(prime_generator(1))
 
 
