@@ -9,22 +9,34 @@ primes = []
 # arguments: start: int , stop:  int 
 #starts at 2 normaly with no start value
 def prime_generator(start = 2, stop = 10):
-    primes
+    primes = []
     for num in range(start, stop):
+        if num < 2:
+            continue
         counter = 0
-        #print(f"dividee number {num}")
-        for i in range(1, num):
+        for i in range(2, num):
             if num % i == 0:
-                #print(f"passed num {num}")
                 counter += 1
-        if counter == 1:
-            #print(f"further passed num {num}")
+        if counter == 0:
             primes.append(num)
     return primes
 
+list_of_primes = prime_generator(2,6000)
 
-# def odd_composite_generator(start, primes, stop=6000):
+def odd_composite_generator(start = 2, stop = 10):
+    composites = []
+    for num in range(start, stop):
+        if num % 2 != 0:
+            counter = 0
+            for i in range(1, num + 1):
+                if num % i == 0:
+                    counter += 1
+            if counter > 2:
+                composites.append(num)
+    print(composites)
+    return composites
 
-print(prime_generator(2,100))
+odd_composite_generator(2 , 30)
+
 
 
