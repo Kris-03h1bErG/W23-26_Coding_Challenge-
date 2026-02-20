@@ -6,8 +6,8 @@ odd_composites = []
 squares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 primes = []
 
-# arguments: start: int , stop:  int 
-#starts at 2 normaly with no start value
+# takes a start and stop int > defult of 2 int > defult of 10
+# returns list o' primes 
 def prime_generator(start = 2, stop = 10):
     primes = []
     for num in range(start, stop):
@@ -21,8 +21,8 @@ def prime_generator(start = 2, stop = 10):
             primes.append(num)
     return primes
 
-list_of_primes = prime_generator(2,6000)
-
+# takes a start and stop int > defult of 2 int > defult of 10
+# returns list o' composites 
 def odd_composite_generator(start = 2, stop = 10):
     composites = []
     for num in range(start, stop):
@@ -33,10 +33,15 @@ def odd_composite_generator(start = 2, stop = 10):
                     counter += 1
             if counter > 2:
                 composites.append(num)
-    print(composites)
+    #print(composites)
     return composites
 
-odd_composite_generator(2 , 30)
+def goldbachs_conjecture_checker(list_of_primes, list_of_odd_composites ,)
+    print("fuck")
+
+list_of_primes = prime_generator(2 , 5000)
+odd_composite_generator(2 , 5000)
+
 
 
 
